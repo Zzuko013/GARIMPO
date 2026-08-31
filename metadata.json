@@ -1,0 +1,6 @@
+{
+  "name": "GARIMPO - Curadoria de Moda",
+  "description": "Curadoria de moda, achados reais e preços que fazem sentido com opinião editorial e comparador de lojas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
