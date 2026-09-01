@@ -2,6 +2,7 @@ import React from "react";
 import { Product } from "../types";
 import { formatBRL, calculateDiscount, isHistoricalLow } from "../lib/utils";
 import { Bookmark, Bell, ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
+import { ImageWithFallback } from "./ImageWithFallback";
 
 interface ProductCardProps {
   product: Product;
@@ -29,12 +30,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     >
       {/* Top Image Section */}
       <div className="relative aspect-[4/3] sm:aspect-[4/5] bg-[#F4F3EE] overflow-hidden">
-        <img
+        <ImageWithFallback
           src={product.imageUrl}
           alt={product.title}
-          referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-500 ease-out"
-          loading="lazy"
         />
 
         {/* Badges Overlay */}

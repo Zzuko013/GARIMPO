@@ -1,6 +1,7 @@
 import React from "react";
 import { siteConfig } from "../config/site";
 import { ArrowRight, Sparkles, BookOpen, ExternalLink } from "lucide-react";
+import { ImageWithFallback } from "./ImageWithFallback";
 
 interface EditorialHeroProps {
   onExploreClick: () => void;
@@ -85,10 +86,9 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
           <div className="relative bg-white border border-[#1C1C1A]/10 rounded-3xl overflow-hidden shadow-2xl shadow-[#1C1C1A]/5">
             {/* Image & Badges */}
             <div className="relative aspect-[4/3] sm:aspect-[4/5] bg-stone-100 overflow-hidden">
-              <img
+              <ImageWithFallback
                 src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80"
                 alt="Adidas Grand Court TD"
-                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
               

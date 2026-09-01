@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Product, Offer } from "../types";
 import { formatBRL, calculateDiscount, isHistoricalLow, formatDate } from "../lib/utils";
+import { ImageWithFallback } from "./ImageWithFallback";
 import {
   X,
   ExternalLink,
@@ -134,10 +135,9 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
             {/* Gallery (Col 5) */}
             <div className="md:col-span-5 space-y-3">
               <div className="aspect-[4/3] sm:aspect-[4/5] bg-[#F4F3EE] rounded-2xl overflow-hidden border border-[#1C1C1A]/10 relative">
-                <img
+                <ImageWithFallback
                   src={activeImage}
                   alt={product.title}
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center"
                 />
                 {discountPercent > 0 && (
@@ -159,10 +159,9 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                           : "border-[#1C1C1A]/10 opacity-70 hover:opacity-100"
                       }`}
                     >
-                      <img
+                      <ImageWithFallback
                         src={img}
                         alt=""
-                        referrerPolicy="no-referrer"
                         className="w-full h-full object-cover"
                       />
                     </button>

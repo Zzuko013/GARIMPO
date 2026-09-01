@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Product, PriceAlert } from "../types";
 import { formatBRL } from "../lib/utils";
 import { Bell, Check, X, Send, MessageSquare, Mail, Sparkles } from "lucide-react";
+import { ImageWithFallback } from "./ImageWithFallback";
 
 interface PriceAlertModalProps {
   product: Product | null;
@@ -94,7 +95,7 @@ export const PriceAlertModal: React.FC<PriceAlertModalProps> = ({
 
             {/* Product summary */}
             <div className="bg-white p-3.5 rounded-2xl flex items-center gap-3 border border-[#1C1C1A]/10 shadow-2xs">
-              <img
+              <ImageWithFallback
                 src={product.imageUrl}
                 alt=""
                 className="w-12 h-12 object-cover rounded-xl border border-[#1C1C1A]/5"

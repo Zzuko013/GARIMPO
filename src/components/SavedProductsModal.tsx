@@ -2,6 +2,7 @@ import React from "react";
 import { Product } from "../types";
 import { formatBRL, calculateDiscount } from "../lib/utils";
 import { X, Trash2, Bookmark, ExternalLink } from "lucide-react";
+import { ImageWithFallback } from "./ImageWithFallback";
 
 interface SavedProductsModalProps {
   isOpen: boolean;
@@ -103,7 +104,7 @@ export const SavedProductsModal: React.FC<SavedProductsModalProps> = ({
                   key={product.id}
                   className="bg-white border border-[#1C1C1A]/10 rounded-2xl p-4 flex gap-3.5 items-center group relative hover:border-[#1C1C1A]/30 transition-all shadow-2xs"
                 >
-                  <img
+                  <ImageWithFallback
                     src={product.imageUrl}
                     alt={product.title}
                     className="w-16 h-16 object-cover rounded-xl bg-[#F4F3EE] border border-[#1C1C1A]/5"
